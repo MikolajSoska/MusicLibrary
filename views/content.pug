@@ -1,0 +1,12 @@
+script(src="/javascripts/main_script.js")
+div#main
+    each item in data
+        div.content(onclick='showCD(' + item.diskID + ')')
+            div.up
+                img(src="/images/covers/" + item.title.toLowerCase() + ".jpg" alt='cover')
+                div
+                    p.title #{item.title.toUpperCase()}
+                    p.author #{item.authorName.toUpperCase()}
+            div.down
+                p.year ROK: #{item.year}
+                p.genre GATUNEK: #{item.genreName.toUpperCase()}

@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        title= title
+        link(href="https://fonts.googleapis.com/css?family=Josefin+Sans:700" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet")
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        script(src='/javascripts/nav_script.js')
+        link(rel='stylesheet' href='/stylesheets/nav_style.css')
+        link(href="/stylesheets/main_style.css" rel="stylesheet")
+        link(rel="shortcut icon" type="image/png" href="/images/favicon.png")
+    body
+        block entry
+        header
+            div DOMOWA BIBLIOTEKA PŁYT CD
+        nav.navbar
+            div.container-fluid
+                div.navbar-header
+                    button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                div.collapse.navbar-collapse#navbar
+                    ul.nav.navbar-nav
+                        li#home
+                            a.nav-links(href="/home") ALBUMY
+                        li#authors
+                            a.nav-links(href="/authors") WYKONAWCY
+                        li#genres
+                            a.nav-links(href="/genres") GATUNKI
+        button.btn#up-button
+            img(src="/images/arrow_up.png" alt="arrow_up")
+    block content
+
+    block comments

@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    link(href="/stylesheets/cd_style.css" rel="stylesheet")
+    link(href="/stylesheets/comments_style.css" rel="stylesheet")
+    script(src="/javascripts/main_script.js")
+    script(src="/javascripts/comments_script.js")
+    each item in data
+        div.row.cd-content
+            img.col-lg-4.col-lg-offset-1.col-md-4.col-md-offset-1#cover(src="/images/covers/" + item.title.toLowerCase() + ".jpg" alt='cover')
+            div.col-lg-6.col-md-6#up
+                p#title Nazwa albumu: #{item.title}
+                a#author(href='/authors/' + item.authorID) Wykonawca: #{item.authorName}
+                p#year Rok wydania: #{item.year}
+                a#genre(href='/genres/' + item.genreID) Gatunek: #{item.genreName}
+        div.container-fluid.cd-content#down
+            p#desc #{item.description}
+        div.divider
+        p.cd-content#list Lista utworów:
+        div.row#list-head.cd-content
+            p.col-lg-1.col-lg-offset-1.col-md-1.col-md-offset-1.col-sm-1.col-sm-offset-1.col-xs-1.col-xs-offset-1 Numer
+            p.col-lg-8.col-md-8.col-sm-8.col-xs-8 Tytuł
+            p.col-lg-1.col-md-1.col-sm-1.col-xs-1 Długość
+            each song in songs
+                div.row.elements
+                    p.col-lg-1.col-lg-offset-1.col-md-1.col-md-offset-1.col-sm-1.col-sm-offset-1.col-xs-1.col-xs-offset-1.number #{song.number}
+                    p.col-lg-8.col-md-8.col-sm-8.col-xs-8.name #{song.name}
+                    p.col-lg-1.col-md-1.col-sm-1.col-xs-1.length #{song.length}
+
+        div.divider
+        div#comments Komentarze:
+            each comment in comments
+                div.comment
+                    p.comment-author #{comment.commentAuthor}
+                    p.comment-text #{comment.commentText}
+        div.divider
+        div#button
+            button.btn Dodaj komentarz
+        div#comment
+            form(method='POST' action='/home/comment/' + item.diskID)
+                p Autor:
+                input#comment-author(type='text' name='author')
+                p Treść:
+                textarea(name='text' cols=50 rows=6)
+                div#buttons
+                    input#submit-button(type='submit' value='Dodaj')
+                    a#cancel-button.btn Anuluj

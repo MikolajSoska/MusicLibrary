@@ -1,0 +1,151 @@
+body {
+    background: url("../images/background.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.content {
+    padding: 30px;
+    background: rgba(0,0,0,0.4);
+    box-shadow: black 0 0 30px;
+    display: table;
+    color: white;
+    width: 50%;
+    margin: 70px auto;
+    text-align: center;
+    font-family: 'Francois One', sans-serif;
+    text-shadow: black 0 0 7px;
+}
+
+.content:hover {
+    background: rgba(0,0,0,0.6);
+    color: grey;
+    cursor: pointer;
+}
+
+.up {
+    display: flex;
+}
+
+.up div {
+    flex: 1;
+    margin: auto 0;
+}
+
+.content img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    box-shadow: black 0 0 15px;
+}
+
+.title {
+    font-size: 80px;
+}
+
+.author {
+    font-size: 42px;
+}
+
+.year {
+    font-size: 38px;
+    margin: 20px 0 0 80px;
+    float: left;
+}
+
+.genre {
+    font-size: 38px;
+    margin: 20px 80px 0 0;
+    float: right;
+}
+
+.authors {
+    display: table;
+    margin: auto;
+}
+
+.author-block {
+    position: relative;
+    margin: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+.author-block div:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.8);
+}
+
+.author-block img {
+    height: 300px;
+    width: auto;
+}
+
+.author-block div {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.author-block p {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    font-size: 64px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.genres {
+    width: 60%;
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    margin: auto;
+}
+
+.genre-block {
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px black;
+    margin: 30px;
+}
+
+.genre-block:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.8);
+}
+
+.divider {
+    width: 75%;
+    height: 3px;
+    background: white;
+    margin: auto;
+    box-shadow: 0 0 15px black;
+}
+
+@media screen and (max-width: 1500px) {
+    .up {
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .up div {
+        flex: 0;
+    }
+
+    .content img, .year, .genre{
+        float: none;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .genres {
+        font-size: 40px;
+    }
+}

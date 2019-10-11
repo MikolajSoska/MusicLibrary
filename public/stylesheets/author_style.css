@@ -1,0 +1,27 @@
+.author-content {
+    text-align: center;
+    color: white;
+    font-family: 'Francois One', sans-serif;
+    text-shadow: 0 0 15px black;
+}
+
+#photo {
+    box-shadow: 0 0 15px black;
+}
+
+#name {
+    font-size: 72px;
+}
+
+#desc {
+    font-size: 32px;
+    width: 90%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    #photo {
+        width: 80%;
+    }
+}
+

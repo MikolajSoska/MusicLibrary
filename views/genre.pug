@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    link(href="/stylesheets/genre_style.css" rel="stylesheet")
+    script(src="/javascripts/genres_script.js")
+    each item in data
+        div.genre-content
+            p#name #{item.genreName}
+            div.divider
+            p#desc #{item.genreDesc}

@@ -1,0 +1,71 @@
+.cd-content {
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    text-shadow: 0 0 10px black;
+    margin: 0;
+    padding: 0;
+}
+
+#up {
+    font-size: 52px;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+#down {
+    font-size: 36px;
+    width: 90%;
+    margin: 30px auto 10px;
+}
+
+#cover {
+    padding: 0;
+    box-shadow: 0 0 15px black;
+}
+
+#author, #genre {
+    color: white;
+}
+
+#author:hover, #genre:hover {
+    cursor: pointer;
+    color: #006622;
+    text-decoration: none;
+}
+
+#list {
+    margin-top: 10px;
+    font-size: 48px;
+    text-align: center;
+}
+
+#list-head {
+    margin: 15px 0;
+    font-size: 26px;
+    text-shadow: 0 0 10px black;
+}
+
+.elements {
+    margin: 0;
+}
+
+.number, .length {
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    #cover {
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+
+    .cd-content {
+        margin: auto;
+    }
+
+    #up, #down {
+        text-align: center;
+    }
+}

@@ -1,0 +1,17 @@
+.genre-content {
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    text-shadow: 0 0 15px black;
+}
+
+#name {
+    text-align: center;
+    font-size: 70px;
+}
+
+#desc {
+    font-size: 48px;
+    margin: auto;
+    width: 90%;
+
+}

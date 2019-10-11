@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    script(src="/javascripts/genres_script.js")
+    div.genres
+        each item in data
+                    div.genre-block(onclick='showGenre(' + item.genreID + ')') #{item.genreName}

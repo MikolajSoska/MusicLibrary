@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    link(href="/stylesheets/author_style.css" rel="stylesheet")
+    script(src="/javascripts/authors_script.js")
+    each item in data
+        div.author-content
+            img#photo(src='/images/authors/' + item.authorName.toLowerCase().replace('/', '') + ".jpg" alt=item.authorName)
+            p#name #{item.authorName}
+            p#desc #{item.authorDesc}

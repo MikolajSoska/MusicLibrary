@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    script(src="/javascripts/authors_script.js")
+    each item in data
+        div.authors(onclick='showAuthor(' + item.authorID + ')')
+            div.author-block
+                div
+                img(src='/images/authors/' + item.authorName.toLowerCase().replace('/','') + ".jpg" alt=item.authorName)
+                p #{item.authorName}
